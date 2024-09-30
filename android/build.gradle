@@ -19,6 +19,7 @@ buildscript {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:7.2.1'
+        implementation "com.google.mlkit:barcode-scanning:17.3.0"
     }
 }
 
@@ -53,9 +54,13 @@ repositories {
         name 'Google'
     }
 }
-
+allprojects(
+    dependencies {
+        implementation "com.google.mlkit:barcode-scanning:17.3.0"
+    }
+)
 dependencies {
     implementation 'com.facebook.react:react-native:+'
     implementation 'com.google.zxing:core:3.4.0'
-    implementation 'com.google.mlkit:barcode-scanning:16.2.0'
+    implementation "com.google.mlkit:barcode-scanning:17.3.0"
 }
